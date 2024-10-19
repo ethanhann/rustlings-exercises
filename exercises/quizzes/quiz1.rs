@@ -12,6 +12,18 @@
 // the quantity bought.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
 
+const REGULAR_APPLE_COST: i32 = 2;
+const DISCOUNT_APPLE_COST: i32 = 1;
+const DISCOUNT_QUANTITY: i32 = 40;
+
+fn calculate_price_of_apples(quantity: i32) -> i32 {
+    if quantity > DISCOUNT_QUANTITY {
+        DISCOUNT_APPLE_COST * quantity
+    } else {
+        REGULAR_APPLE_COST * quantity
+    }
+}
+
 fn main() {
     // You can optionally experiment here.
 }
